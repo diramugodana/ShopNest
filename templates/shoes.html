@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>ShopNest</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="../static/css/main.css" rel="stylesheet" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+
+<!-- Header -->
+<header id="header" class="alt">
+    <h1><a href="{{ url_for('index') }}">ShopNest</a> by Diramu</h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li>
+                <a href="#" class="icon solid fa-angle-down">Pages</a>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('dresses') }}">Dresses</a></li>
+                    <li><a href="{{ url_for('tops') }}">Tops</a></li>
+                    <li><a href="{{ url_for('jeans') }}">Jeans</a></li>
+                    <li><a href="{{ url_for('view_cart') }}">Cart</a></li>
+
+
+                </ul>
+            </li>
+            <li><a href="{{ url_for('logout') }}" class="button">Log out</a></li>
+            </ul>
+            </nav>
+            </header>
+
+            <section id="banner">
+                <h2>Shop Shoes</h2>
+                <p>Explore a wide array of beautiful shoes here</p>
+                <ul class="actions special">
+
+            </ul>
+            </section>
+
+
+<!-- Main -->
+<section id="main" class="container">
+    <div class="row">
+        {% for product in shoes_data %}
+        <div class="col-6 col-12-narrower">
+
+            <section class="box special">
+                <span class="image featured"><img src="{{ url_for('static', filename='images/' + product.image_path)}}" alt="{{ product.name }}"/></span>
+                <h3>{{product.name}}</h3>
+                <p>{{product.description}}</p>
+                <p>Price: {{product.price}}</p>
+                <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post">
+                    
+                    <input type="number" id="quantity" name="quantity" min="0" value="1">
+                    <button type="submit" class="button alt">Add to Cart</button>
+
+                </form>
+            </section>
+        </div>
+    {% endfor %}
+</div>
+</section>
+
+ <!-- Scripts -->
+                <script src="../static/js/jquery.min.js"></script>
+                <script src="../static/js/jquery.dropotron.min.js"></script>
+                <script src="../static/js/jquery.scrollex.min.js"></script>
+                <script src="../static/js/browser.min.js"></script>
+                <script src="../static/js/breakpoints.min.js"></script>
+                <script src="../static/js/util.js"></script>
+                <script src="../static/js/main.js"></script>
+			    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+			    <script src="../static/js/jquery.dropotron.min.js"></script>
+                <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+                <script src="../static/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

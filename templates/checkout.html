@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Checkout - ShopNest</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+</head>
+
+<!--body-->
+<body class="landing is-preload">
+    <div id="page-wrapper">
+
+        <header id="header" class="alt">
+            <h1><a href="{{ url_for('index') }}">ShopNest</a> by Diramu</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li>
+                        <a href="#" class="icon solid fa-angle-down">Pages</a>
+                        <ul>
+                            <li><a href="{{ url_for('tops') }}">Tops</a></li>
+                            <li><a href="{{ url_for('dresses') }}">Dresses</a></li>
+                            <li><a href="{{ url_for('jeans') }}">Jeans</a></li>
+                            <li><a href="{{ url_for('shoes') }}">Shoes</a></li>
+                            <li><a href="{{ url_for('view_cart') }}">Cart</a></li>
+                            <li><a href="{{ url_for('login') }}">Log in</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('logout') }}" class="button">Log out</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="banner">
+            <h2>Checkout</h2>
+            <p>Elevate your shopping experience from the comfort of your home.</p>
+            <ul class="actions special">
+                <li><a href="{{ url_for('view_cart') }}" class="button primary">View cart</a></li>
+                <li><a href="{{ url_for('index') }}" class="button">Back to products</a></li>
+            </ul>
+        </section>
+        <section id="main" class="container">
+
+            <section class="box special">
+                <header class="major">
+            <h2><strong>Thank you for shopping with ShopNest!</strong></h2>
+            <p>Welcome back again</p>
+            <br>
+            <p>Total Price: ${{ total_price }}</p>
+            </header>
+            </section>
+        </section>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery.dropotron.min.js"></script>
+    <script src="../static/js/jquery.scrollex.min.js"></script>
+    <script src="../static/js/browser.min.js"></script>
+    <script src="../static/js/breakpoints.min.js"></script>
+    <script src="../static/js/util.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

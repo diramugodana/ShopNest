@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>ShopNest by Diramu</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link href="../static/css/main.css" rel="stylesheet" />
+    </head>
+
+    <body class="landing is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header" class="alt">
+                <h1><a href="{{ url_for('index') }}">ShopNest</a> by Diramu</h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li>
+                            <a href="#" class="icon solid fa-angle-down">Pages</a>
+                            <ul>
+                                <li><a href="{{ url_for('tops') }}">Tops</a></li>
+								<li><a href="{{ url_for('dresses') }}">Dresses</a></li>
+                                <li><a href="{{ url_for('jeans') }}">Jeans</a></li>
+                                <li><a href="{{ url_for('shoes') }}">Shoes</a></li>
+                                <li><a href="{{ url_for('view_cart') }}">Cart</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('logout') }}" class="button">Log out</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <h2>ShopNest</h2>
+                <p>Elevate your shopping experience from the comfort of your home.</p>
+
+                
+            </section>
+
+            <!-- Main -->
+            <section id="main" class="container">
+
+                <section class="box special">
+                    <header class="major">
+                        <h2>Explore a diverse range of women's clothing
+                            <br />
+                            for you
+                        </h2>
+                        <p>Explore a carefully curated selection of dresses, tops, bottoms, and shoes, each reflecting the latest trends in fashion.</p>
+                    </header>
+
+
+                </section>
+
+                <section class="box special features">
+                    <div class="features-row">
+                        <section>
+                            <span class="icon solid major fa-bolt accent2"></span>
+                            <h3>Elegance in Every Size</h3>
+                            <p>Our commitment to providing a diverse and size-inclusive range of women's clothing is reflected in every piece we offer. Discover fashion that transcends size barriers, allowing you to express your style with confidence and grace</p>
+                        </section>
+                        <section>
+                            <span class="icon solid major fa-chart-area accent3"></span>
+                            <h3>Carefully Curated Selection</h3>
+                            <p>We pride ourselves on bringing you a thoughtfully selected range of women's clothing, each piece chosen with precision to reflect the latest trends and timeless style. Explore our collection and elevate your wardrobe with pieces that are as unique as you are.</p>
+                        </section>
+                    </div>
+                    <div class="features-row">
+                        <section>
+                            <span class="icon solid major fa-cloud accent4"></span>
+                            <h3>Embrace Your Uniqueness in Style</h3>
+                            <p> Our fashion is a canvas for self-expression, allowing you to embrace your uniqueness with every outfit. Step into a world where your style is as distinct as you are, and let your wardrobe tell the tale of your one-of-a-kind personality.</p> .</p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-lock accent5"></span>
+                        <h3>Make a statement</h3>
+                        <p>Every single piece tells a unique story. Our collection is a celebration of uniqueness, offering you fashion that goes beyond the ordinary. Explore our carefully curated styles and make a statement that is exclusively yours.</p>
+                    </section>
+                </div>
+            </section>
+
+            <div class="row">
+                <div class="col-6 col-12-narrower">
+
+                    <section class="box special">
+                        <span class="image featured"><img src="../static/images/pic02.jpeg" alt="" /></span>
+                        <h3>Tops</h3>
+                        <p>Elevate your everyday style with our collection of trendy tops. From casual classics to statement pieces, discover the perfect fit for every occasion. Effortlessly chic and endlessly versatile.</p>
+                        <ul class="actions special">
+                            <li><a href="{{ url_for('tops') }}" class="button alt">Learn More</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+                <div class="col-6 col-12-narrower">
+
+                    <section class="box special">
+                        <span class="image featured"><img src="../static/images/pic03.jpeg" alt="" /></span>
+                        <h3>Dresses</h3>
+                        <p>Step into elegance with our stunning dresses collection. From timeless classics to on-trend designs, find the perfect dress to suit your style. Embrace confidence and grace with every step.</p>
+                        <ul class="actions special">
+                            <li><a href="{{ url_for('dresses') }}" class="button alt">Learn More</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <div class="col-6 col-12-narrower">
+
+                    <section class="box special">
+                        <span class="image featured"><img src= "../static/images/pic04.jpeg" alt="" /></span>
+                        <h3>Jeans</h3>
+                        <p>Discover the perfect pair of jeans that combines comfort and style seamlessly. Our collection features a variety of cuts and washes, ensuring a flattering fit for every body. Elevate your denim game with our latest arrivals.</p>
+                        <ul class="actions special">
+                            <li><a href="{{ url_for('jeans') }}" class="button alt">Learn More</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <div class="col-6 col-12-narrower">
+
+                    <section class="box special">
+                        <span class="image featured"><img src="../static/images/pic05.jpeg" alt="" /></span>
+                        <h3>...and shoes</h3>
+                        <p>Complete your look from head to toe with our curated collection of stylish shoes. Find the perfect pair to complement your unique style. Step out in confidence with our latest footwear arrivals.</p>
+                        <ul class="actions special">
+                            <li><a href="{{ url_for('shoes') }}" class="button alt">Learn More</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </section>
+
+            <!-- CTA -->
+        <section id="cta">
+
+            <h2>Sign up for updates</h2>
+            <p>Join our mailing list here</p>
+
+            <form>
+                <div class="row gtr-50 gtr-uniform">
+                    <div class="col-8 col-12-mobilep">
+                        <input type="email" name="email" id="email" placeholder="Email Address" />
+                    </div>
+                    <div class="col-4 col-12-mobilep">
+                        <input type="submit" value="Sign Up" class="fit" />
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+            <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design:Diramu</a></li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/jquery.dropotron.min.js"></script>
+<script src="../static/js/jquery.scrollex.min.js"></script>
+<script src="../static/js/browser.min.js"></script>
+<script src="../static/js/breakpoints.min.js"></script>
+<script src="../static/js/util.js"></script>
+<script src="../static/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../static/js/jquery.dropotron.min.js"></script>
+<script src="../static/script.js"></script>
+
+
+
+
+
+</body>
+
+</html>
+
+

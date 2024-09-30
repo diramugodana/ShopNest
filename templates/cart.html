@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Cart</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="landing is-preload">
+    <div id="page-wrapper">
+
+<!-- Header -->
+<header id="header" class="alt">
+    <h1><a href="{{ url_for('index') }}">ShopNest</a> by Diramu</h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li>
+                <a href="#" class="icon solid fa-angle-down">Pages</a>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('tops') }}">Tops</a></li>
+                    <li><a href="{{ url_for('dresses') }}">Dresses</a></li>
+                    <li><a href="{{ url_for('jeans') }}">Jeans</a></li>
+                    <li><a href="{{ url_for('shoes') }}">Shoes</a></li>
+                    <li><a href="{{ url_for('view_cart') }}">Cart</a></li>
+
+                </ul>
+            </li>
+            <li><a href="{{ url_for('logout') }}" class="button">Log out</a></li>
+            </ul>
+            </nav>
+            </header>
+
+            <section id="banner">
+                <h2>Shopping Cart</h2>
+
+
+                <ul class="actions special">
+                    <p>View your personalised shopping trolley</p>
+            </ul>
+            </section>
+
+
+<!-- Cart Section -->
+<section id="cart" class="parent container">
+    <div class="row">
+        <h3>Shopping Cart</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+                <!-- Loop through cart items and render table rows -->
+                {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td><button onclick="removeFromCart({{ item.id }})">Remove</button></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Display Total Price -->
+        <p>Total Price: {{ total_price }}</p>
+
+        <!-- Add a link to the checkout page -->
+        <a href="{{ url_for('checkout') }}" class="button primary">Proceed to Checkout</a>
+
+    </div>
+</section>
+
+
+ <!-- Scripts -->
+ <script src="../static/js/jquery.min.js"></script>
+ <script src="../static/js/jquery.dropotron.min.js"></script>
+ <script src="../static/js/jquery.scrollex.min.js"></script>
+ <script src="../static/js/browser.min.js"></script>
+ <script src="../static/js/breakpoints.min.js"></script>
+ <script src="../static/js/util.js"></script>
+ <script src="../static/js/main.js"></script>
+ <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
+
